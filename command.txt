@@ -234,4 +234,133 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-jains@ShwetaMG MINGW64 ~/De
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git restore fruits.txt
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   command.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git add --all
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git commit -m 'File updated'
+[main 43b58dc] File updated
+ 1 file changed, 45 insertions(+), 1 deletion(-)
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git branch 
+* main
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git checkout -b GitPractice
+Switched to a new branch 'GitPractice'
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (GitPractice)
+$ git status
+On branch GitPractice
+nothing to commit, working tree clean
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (GitPractice)
+$ git push origin GitPractice
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (18/18), 2.70 KiB | 923.00 KiB/s, done.
+Total 18 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Shweta-MG/GitPractice.git
+ * [new branch]      GitPractice -> GitPractice
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (GitPractice)
+$ git status
+Revert "Rearranged"
+
+This reverts commit 79932310de5a5c6b3f68266f2e9a95afe1652b2d.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch GitPractice
+# Changes to be committed:
+#       modified:   car.txt
+
+
+~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   ~                                                                   .git/COMMIT_EDITMSG[+] [unix] (12:38 21/05/2023)        10,22-28 Bot-- REPLACE --
+
+(ctr + c) to cancelled 
+
+
+nothing to commit, working tree clean
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (GitPractice)     
+$ git log
+commit 43b58dc2ebc32ba3cbd4c99c41f62e767dc99822 (HEAD -> GitPractice, origin/GitPractice, main)
+Author: Shweta-MG <shweta.malav@gmail.com>
+Date:   Sun May 21 12:34:16 2023 +0200
+
+    File updated
+
+commit a87f63602f2f93fbfafe5f15f02acb6261900767
+Author: Shweta-MG <shweta.malav@gmail.com>
+Date:   Sun May 21 12:32:07 2023 +0200
+
+    Initial commit
+
+commit 87aecfece0ce069e2923d112482831b94ee1219b
+Author: Shweta-MG <shweta.malav@gmail.com>
+Date:   Sun May 21 12:30:50 2023 +0200
+
+    Rearraned fruits
+
+commit 79932310de5a5c6b3f68266f2e9a95afe1652b2d
+Author: Shweta-MG <shweta.malav@gmail.com>
+Date:   Sun May 21 12:30:04 2023 +0200
+
+    Rearranged
+
+commit 6b7b317e1022ac1fd8ec38d15a09a61a747bfd5c
+Author: Shweta-MG <shweta.malav@gmail.com>
+Date:   Sun May 21 12:29:30 2023 +0200
+
+    Initial commit
+
+commit 2c67989363258a73d70f51f70f47bf6df246f2ef
+Author: Shweta-MG <shweta.malav@gmail.com>
+Date:   Sun May 21 12:28:14 2023 +0200
+
+    Initial commit
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (GitPractice)     
+$ git revert 79932310de5a5c6b3f68266f2e9a95afe1652b2d
+hint: Waiting for your editor to close the file... Vim: Error reading input, exiting...
+Vim: preserving files...
+Vim: Finished.
+
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (GitPractice)     
+$ git status
+On branch GitPractice
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   car.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)        
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   command.txt
