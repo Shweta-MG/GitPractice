@@ -191,3 +191,47 @@ index fdcea6c..48adc0f 100644
 
 jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
 $ touch command.txt
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        command.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git add --all
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git commit -m 'Initial commit'
+[main a87f636] Initial commit
+ 1 file changed, 193 insertions(+)
+ create mode 100644 command.txt
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+jains@ShwetaMG MINGW64 ~/Desktop/Repo/GitPractice (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   fruits.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+jains@ShwetaMG MINGW64 ~/De
